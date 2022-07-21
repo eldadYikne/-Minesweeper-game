@@ -129,6 +129,20 @@ img{
     text-align: left;
     border-radius: 15px;
     border: solid rgba(0, 0, 0, 0.169);
+    
+}
+.hint{
+    margin-top: 20px;
+    margin-left: 250px;
+    font-family: ui-sans-serif, system-ui, -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    background-color: #3DD1E7;   
+     height: 100px;
+     width: 200px;
+    font-size: 30px;
+    text-align: left;
+    border-radius: 15px;
+    border: solid rgba(0, 0, 0, 0.169);
+    cursor: pointer;
 }
 
 

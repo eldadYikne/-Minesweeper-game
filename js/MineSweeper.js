@@ -2,6 +2,7 @@
 const LIFE = '💖'
 const BOMB = '💣'
 const FLAG = '🚩'
+const HINT='💡'
 const CRY='<img style= width:100px src="../img/cry.png" />'
 const HAPPY= '<img style= width:100px src="../img/cool.png" />'
 const GAMEOVER= '<img style= width:100px src="../img/game-over.png" />'
@@ -21,10 +22,12 @@ var cellInput
 var gStartTime
 var gInterval
 var gsec
+var isHint=false
 var gCountClick = 0
 var lastScores
 var isRightMB = false
 var gLifeCounter=3
+var gHintCounter=3
 
 init()
 function init() {
@@ -32,7 +35,7 @@ function init() {
     renderCells()
     renderBoard()
     liveCounter()
-
+    hint()
     console.log(gBoard);
 }
 function buildBoard() {
@@ -103,7 +106,6 @@ function renderCells() {
     gGame.shownCount=shownCounter
     gGame.markedCount=markedCounter
 
-    console.log(gGame);
 }
 
 
@@ -111,6 +113,17 @@ function cellClicked(elCell, i, j) {
     if (gGame.isOn) return
     if (elCell.innerText === FLAG) return
     if(gBoard[i][j].isShown)return
+    if(isHint){
+        var neighbors = setNoMinesCellsNegs(gBoard,i,j)
+        console.log(neighbors);
+        for(var i=0;i<neighbors.length;i++){
+            var elneighbor = document.querySelector(`[data-i="${neighbors[i].i}"][data-j="${neighbors[i].j}"]`)
+            console.log(elneighbor);
+            elneighbor.style.color = 'black'
+            setTimeOut(i,neighbors)
+            isHint=false
+        }
+    }
     renderCells()
     gCountClick++
     if (gCountClick === 1) {
@@ -151,6 +164,13 @@ function cellClicked(elCell, i, j) {
         gLifeCounter--
         gameOver()
     }
+}
+function setTimeOut(i,neighbors){
+    setTimeout(() => {  
+        var elneighbor = document.querySelector(`[data-i="${neighbors[i].i}"][data-j="${neighbors[i].j}"]`)
+        elneighbor.style.color='transparent'},
+    1000 )
+ 
 }
 function getSelector(coord) {
 
@@ -329,16 +349,26 @@ function cellMarked(ev) {
 }
 function liveCounter(){
     var elLife=document.querySelector('.live')
-   console.log(gLifeCounter);
    var str= 'Live:'
     
    for(var i=0;i<gLifeCounter;i++){
        str+= LIFE
     }
     elLife.innerText = str
-// str=''
+
 
 }
+function hint(elBtn){
+    if(elBtn) gHintCounter--
+    var elLife=document.querySelector('.hint')
+   var str= 'Hint:'
+   for(var i=0;i<gHintCounter;i++){
+       str+= HINT
+    }
+    elLife.innerText = str
+isHint=true
+}
+
 const noContext = document.getElementById('noContextMenu');
 noContext.addEventListener('contextmenu', e => {
     e.preventDefault();
