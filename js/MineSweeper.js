@@ -3,10 +3,10 @@ const LIFE = '💖'
 const BOMB = '💣'
 const FLAG = '🚩'
 const HINT = '💡'
-const CRY = '<img style= width:100px src="../img/cry.png" />'
-const HAPPY = '<img style= width:100px src="../img/cool.png" />'
-const GAMEOVER = '<img style= width:100px src="../img/game-over.png" />'
-const VICTORY = '<img style= width:100px src="../img/star.png" />'
+const CRY = '<img style= width:100px src="img/cry.png" />'
+const HAPPY = '<img style= width:100px src="img/cool.png" />'
+const GAMEOVER = '<img style= width:100px src="img/game-over.png" />'
+const VICTORY = '<img style= width:100px src="img/star.png" />'
 var gBoard
 var gLevel = {
     size: 4,
