@@ -9,7 +9,15 @@ border: 5px solid #FFFF00;
 /* padding: 100px; */
 }
 
-
+.safeclick{
+    height: 60px;
+    width: 60px;
+    /* margin-top: 20px; */
+    background-color: #55dae4;
+    transform: rotate(-2deg);
+    cursor: pointer;
+    
+    }
 .button-53 {
     background-color: #3DD1E7;
     border: 0 solid #E5E7EB;
@@ -44,7 +52,9 @@ border: 5px solid #FFFF00;
 .button-53:focus {
     outline: 0;
 }
-
+.issafe{
+    background-color: rgb(153, 149, 149);
+}
 .button-53:after {
     content: '';
     position: absolute;
