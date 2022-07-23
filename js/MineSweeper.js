@@ -3,8 +3,8 @@ const LIFE = '💖'
 const BOMB = '💣'
 const FLAG = '🚩'
 const HINT = '💡'
-const CRY = '<img style= width:100px src="img/cry.png" />'
-const HAPPY = '<img style= width:100px src="img/cool.png" />'
+const CRY = '<img  src="img/cry.png" />'
+const HAPPY = '<img  src="img/cool.png" />'
 const GAMEOVER = '<img style= width:100px src="img/game-over.png" />'
 const VICTORY = '<img style= width:100px src="img/star.png" />'
 var gBoard
@@ -300,7 +300,7 @@ function levelCoice(elBtn) {
 function gameOver() {
     var elScor = document.querySelector('.score')
     elScor.innerHTML =
-        `<table class="score">
+        `<table class="time">
     <tr>
     <th>score</th>
     <th>time</th>
@@ -399,7 +399,7 @@ function cellMarked(ev) {
 }
 function liveCounter() {
     var elLife = document.querySelector('.live')
-    var str = 'Live:'
+    var str = ''
 
     for (var i = 0; i < gLifeCounter; i++) {
         str += LIFE
@@ -415,7 +415,7 @@ function hint(elBtn) {
         isHint = true
     }
     var elLife = document.querySelector('.hint')
-    var str = 'Hint:'
+    var str = ''
     for (var i = 0; i < gHintCounter; i++) {
         str += HINT
     }
