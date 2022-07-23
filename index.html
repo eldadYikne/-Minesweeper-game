@@ -8,21 +8,21 @@
 
 <body >
     <h1>The Mine Sweeper  </h1>
+    <div class="levelbtn">
+      <button class="button-53" role="button" onclick="levelCoice(this)" >Beginner</button>
+      <button class="button-53" role="button" onclick="levelCoice(this)">Smart-Guy</button>
+      <button class="button-53" role="button" onclick="levelCoice(this)">Totaly Crazy</button>
+    </div>
 <div>
     <h3 class=" timer"> timer:  </h3>    
     <button class="rstbtn" onclick="rstBtn()"><img src="img/cool.png">  </button>         
     <div class=" score" >   </div>    
     <div class="live"></div>
     <div class="hint" onclick="hint(this)"> Hint: </div>
-    <button class="safeclick" onclick="safeClick()" > safe click</button> 
-  <div class="levelbtn">
-      <div class="divgame">
-      </div>
-      
-      <button class="button-53" role="button" onclick="levelCoice(this)" >Beginner</button>
-      <button class="button-53" role="button" onclick="levelCoice(this)">Smart-Guy</button>
-      <button class="button-53" role="button" onclick="levelCoice(this)">Totaly Crazy</button>
+    <button class="safeclick" onclick="safeClick()" > <img src="img/safeclick.png"></button> 
+    <div class="divgame">
     </div>
+    
 </div>
 
     <table class="gameboard" id="noContextMenu">
