@@ -153,6 +153,8 @@ function cellClicked(elCell, i, j) {
 
     var currCell = gBoard[i][j]
     currCell.isShown = true
+    console.log(gBoard[i][j]);
+
     if (!currCell.isMine) {
         elCell.innerText = currCell.minesAroundCount
         elCell.classList.add('clicked')
@@ -207,8 +209,12 @@ function recursionNeg(mat, rowIdx, CollIdx) {
             if (j < 0 || j > mat[i].length - 1) continue
             var elCell = document.querySelector(`[data-i="${i}"][data-j="${j}"]`)
             elCell.classList.add('clicked')
+            if (elCell.innerText>0) mat[i][j].isShown=true 
             if (mat[i][j].minesAroundCount === '' && !mat[i][j].isShown) {
+                 
                 mat[i][j].isShown = true
+                console.log(mat[i][j]);
+                console.log(i,j);
                
                 recursionNeg(mat, i, j)
             }
