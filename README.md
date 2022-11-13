@@ -44,7 +44,7 @@ An app I wrote with Vanuila JavaScript, in which you can add play in the popular
 
 
 ## 3 game level  
- <img src="img/mine1.png" alt="" width="800" height="300">
+ <img src="img/mine3.png" alt="" width="800" height="300">
  
 
 ## You must win! or you get Game-over
