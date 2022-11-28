@@ -40,7 +40,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-An app I wrote with Vanuila JavaScript, in which you can add play in the popular game "Minesweeper" .  [ Take a look, it's on Heroku !](https://eldadyikne.github.io/-Minesweeper-game/)
+An app I wrote with Vanןila JavaScript, in which you can add play in the popular game "Minesweeper" .  [ Take a look, it's on Heroku !](https://eldadyikne.github.io/-Minesweeper-game/)
 
 
 ## 3 game level  
